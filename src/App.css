@@ -55,3 +55,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
+@media (max-width: 980px) {
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
