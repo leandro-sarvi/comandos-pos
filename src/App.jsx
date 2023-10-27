@@ -29,7 +29,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
         <p className='nameComando'>Estado linea de cajas</p>
       <div className="card">
         <input disabled className='textInput' value={comandos[1]}></input>
-        <button onClick={() => copy(comandos[1])}>
+        <button onClick={() => copy(comandos[1])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
         <Snackbar
@@ -45,7 +45,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
 <p className='nameComando'>Verificar dispositivos</p>
       <div className="card">
         <input disabled className='textInput' value={comandos[2]}></input>
-        <button onClick={() => copy(comandos[2])}>
+        <button onClick={() => copy(comandos[2])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -53,8 +53,8 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
       <div className='divCard'>
 <p className='nameComando'>Bloque comandos PinPad Error</p>
       <div className="card">
-        <input disabled className='textInput' value="Bloque Detener / borrar obj / iniciar"></input>
-        <button onClick={() => copy(comandos[0])}>
+        <input disabled className='textInput' value="Bloque detener / borrar obj / iniciar"></input>
+        <button onClick={() => copy(comandos[0])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -63,7 +63,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
 <p className='nameComando'>Verificar Host</p>
       <div className="card">
         <input disabled className='textInput' value={comandos[3]}></input>
-        <button onClick={() => copy(comandos[3])}>
+        <button onClick={() => copy(comandos[3])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -72,7 +72,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
 <p className='nameComando'>Declarar OK AutoServicio o SSCO</p>
       <div className="card">
         <input disabled className='textInput' value={comandos[4]}></input>
-        <button onClick={() => copy(comandos[4])}>
+        <button onClick={() => copy(comandos[4])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -80,8 +80,8 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
       <div className='divCard'>
 <p className='nameComando'>Bloque restart servicios Epson </p>
       <div className="card">
-        <input disabled className='textInput' value="Servicios Epson: status / restart"></input>
-        <button onClick={() => copy(comandos[5])}>
+        <input disabled className='textInput' value="Servicios epson: status / restart"></input>
+        <button onClick={() => copy(comandos[5])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -90,7 +90,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
 <p className='nameComando'>Bloque servicios WebFront</p>
       <div className="card">
         <input disabled className='textInput' value="Servicios WebFront: status / restart"></input>
-        <button onClick={() => copy(comandos[6])}>
+        <button onClick={() => copy(comandos[6])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -99,7 +99,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
 <p className='nameComando'>Verificar fabricante</p>
       <div className="card">
         <input disabled className='textInput' value={comandos[7]}></input>
-        <button onClick={() => copy(comandos[7])}>
+        <button onClick={() => copy(comandos[7])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
@@ -108,7 +108,7 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
 <p className='nameComando'>Estado servicios ARS</p>
       <div className="card">
         <input disabled className='textInput' value={comandos[8]}></input>
-        <button onClick={() => copy(comandos[8])}>
+        <button onClick={() => copy(comandos[8])} title="copy">
           <ContentCopyIcon sx={{ color: "#c06500"}}/>
         </button>
       </div>
