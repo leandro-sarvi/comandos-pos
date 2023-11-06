@@ -6,10 +6,21 @@ import './App.css'
 
 function App() {
   const [open, setOpen] = useState(false)
+  const [value, valuInput] = useState("")
   function copy(copy){
     setOpen(true);
 navigator.clipboard.writeText(copy);
   }
+  function getUpc(value){
+    if(value ==""){
+      alert("Campo vacio")
+    }
+    navigator.clipboard.writeText(`grep ${value} /home/server/inq/M_HSHPLU.DAT | cut -c 4-15`);
+  }
+  const handleChange = (event) => {
+    // 👇 Get input value from "event"
+    valuInput(event.target.value);
+  };
 const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm application.obj\nrm auditTransaction.obj\nrm auditVoucherTransaction.obj\nrm crypt.properties\nrm LAST_RSA.pem\nrm session.obj\nrm workingKeys.properties\nservice emv start\ncat /home/VTOLServices/emvkit/config/application.obj",
 "/home/WMAR/check_POS.sh","lsusb","cat /etc/hosts","/home/reg/gd90/sh/./DECLARE_OK.SH",
 "service epson_devicecontrollogserviced status\nservice epson_pcsvcd status\nservice epson_pcsvcd restart\nservice epson_devicecontrollogserviced restart\n",
@@ -113,7 +124,15 @@ const comandos = ["service emv stop\ncd /home/VTOLServices/emvkit/config/\nrm ap
         </button>
       </div>
       </div>
-
+      <div className='divCard'>
+<p className='nameComando'>Obtener UPC:</p>
+      <div className="card">
+        <input  className='textInput' placeholder='grep NUMERO_SKU /home/server/inq/M_HSHPLU.DAT | cut -c 4-15' onChange={handleChange}></input>
+        <button onClick={() => getUpc(value)} title="copy">
+          <ContentCopyIcon sx={{ color: "#c06500"}}/>
+        </button>
+      </div>
+      </div>
 
 
 
